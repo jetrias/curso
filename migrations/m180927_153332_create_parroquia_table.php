@@ -33,7 +33,7 @@ class m180927_153332_create_parroquia_table extends Migration
             'fk-parroquia-id_municipio',
             'parroquia',
             'id_municipio',
-            'municipioid',
+            'municipio',
             'id',
             'CASCADE'
         );
