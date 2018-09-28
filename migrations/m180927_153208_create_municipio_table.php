@@ -41,6 +41,7 @@ class m180927_153208_create_municipio_table extends Migration
                     [1, 'Libertador', 1],
                     [2, 'Urdaneta', 2]
                     ]);
+        $this->execute('ALTER SEQUENCE municipio_id_seq RESTART 3');
     }
 
     /**

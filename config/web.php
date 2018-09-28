@@ -16,6 +16,7 @@ $config = [
         'modules' => [
         'admin' => [
             'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu', //mod
         ]
     ],//mod1
     'components' => [
@@ -64,7 +65,20 @@ $config = [
             'rules' => [
             ],
         ],
-        
+            //mod
+    'i18n' => [
+        'translations' => [
+            '*' => [
+                'class' => 'yii\i18n\PhpMessageSource',
+                'basePath' => '@app/messages', // if advanced application, set @frontend/messages
+                'sourceLanguage' => 'en',
+                'fileMap' => [
+                    //'main' => 'main.php',
+                ],
+            ],
+        ],
+    ],
+    //mod
     ],//mod3
         'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
@@ -73,6 +87,7 @@ $config = [
             'admin/*',
         ]
     ],//mod3
+
     'params' => $params,
 ];
 

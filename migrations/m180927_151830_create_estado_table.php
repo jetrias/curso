@@ -20,6 +20,7 @@ class m180927_151830_create_estado_table extends Migration
                                 ['Distrito Capital'],
                                 ['Miranda']
                                 ]);
+        $this->execute('ALTER SEQUENCE estado_id_seq RESTART 3');
     }
 
     /**

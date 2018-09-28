@@ -18,7 +18,7 @@ class m180927_153906_insert_parroquia extends Migration
         [3, 'Cúa', 2],
         [4, 'Nueva Cúa', 2],
         ]);
-
+        $this->execute('ALTER SEQUENCE parroquia_id_seq RESTART 5');
     }
 
     /**
@@ -26,12 +26,11 @@ class m180927_153906_insert_parroquia extends Migration
      */
     public function safeDown()
     {
-        echo "m180927_153906_insert_parroquia cannot be reverted.\n";
-
-        return false;
+        $this->truncateTable('parroquia');
+        $this->execute('ALTER SEQUENCE parroquia_id_seq RESTART');
     }
 
-    /*
+    /*  
     // Use up()/down() to run migration code without a transaction.
     public function up()
     {
